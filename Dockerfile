@@ -11,6 +11,4 @@ RUN apk add python
 RUN apk add py-pip
 RUN apk add maven
 RUN apk add docker
-RUN apk add ca-certificates
-RUN find /usr/share/ca-certificates/mozilla/ -name *.crt -exec keytool -import -trustcacerts -keystore $JAVA_HOME/jre/lib/security/cacerts -storepass changeit -noprompt -file {} -alias {} \;
 RUN pip install --upgrade pip awscli awsebcli
